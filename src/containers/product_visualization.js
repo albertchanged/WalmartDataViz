@@ -44,7 +44,7 @@ class ProductVisualization extends Component {
 		bar = svg.selectAll("g")
 			.data(productArray)
 			.enter()
-			.append("g")
+			.append("g");
 
 		bar.attr("class", "bar")
 			.attr("cx", 0)
@@ -76,13 +76,13 @@ class ProductVisualization extends Component {
 		bar.append("rect")
 			.attr("transform", "translate(" + labelWidth + ", 0)")
 			.attr("height", barHeight)
+			.attr("width", 0)
+			.transition()
+			.delay(function(d, i) { return i * 250; })
+			.duration(500)
 			.attr("width", function(d) {
 				return scale(d.salePrice);
-			})
-			.transition()
-         .duration(1000)
-         .delay(100);
-
+			});
 
 		bar.append("text")
 			.attr("class", "value")
@@ -104,7 +104,7 @@ class ProductVisualization extends Component {
                 div.style("left", d3.event.pageX+50+"px");
                 div.style("top", d3.event.pageY-10+"px");
                 div.style("display", "inline-block");
-                div.html("<strong>" + (i + 1) + ".)</strong> " + (d.name)+"<br>"+ "$" + (d.salePrice));
+                div.html("<strong>" + (i + 1) + ".)</strong> " + (d.name)+"<br><strong>Item ID:</strong> "+ (d.itemId) + "<br><strong>Price:</strong> $" + (d.salePrice) + "<br> <img id=\"thumbnailImage\" src=\"" + (d.mediumImage) +"\"/>");
             });
 
     	bar.on("mouseout", function(d){
