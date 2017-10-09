@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_KEY = 'cb52xbb296mfsvcexcg8qdhf';
-const ROOT_URL = `http://api.walmartlabs.com/v1/search?apiKey=${API_KEY}`;
+const ROOT_URL = `https://api.walmartlabs.com/v1/search?apiKey=${API_KEY}`;
 
 export const FETCH_PRODUCT = 'FETCH_PRODUCT';
 
