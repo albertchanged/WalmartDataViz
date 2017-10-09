@@ -16,7 +16,7 @@ class ProductVisualization extends Component {
 		var itemIDs = product.items.map(product => product.itemId);
 		var descriptions = product.items.map(product => product.shortDescription);
 		var productUrls = product.items.map(product => product.productUrl);
-		var prices = product.items.map(product => product.salePrice);
+		var prices = product.items.map(product => product.salePrice);Yes
 		// var formattedPrice = price.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, price);
 		var productArray = product.items;
 		// console.log("This is the product array");
