@@ -24,7 +24,7 @@ Navigate to your terminal / command line and run:
 
 ### Disclaimer
 
-Because I am hosting this application from an 'htt*ps*' domain, and the API call is to an 'htt*p*' domain, my application is currently not supported in most major browsers without using plugins.
+Because I am hosting this application from an 'htt*ps*' domain, and the API call is to an 'htt*p*' domain, my application is currently not supported in most major browsers without using plugins. See [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).
 
 To use in Chrome, please consider installing [this plugin](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi/related?hl=en-US). It is completely safe and used by developers to carry out AJAX calls to external servers!
 
