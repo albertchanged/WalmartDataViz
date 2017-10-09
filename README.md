@@ -2,7 +2,7 @@
 
 This is a React Redux and D3.js-based data visualization tool using Walmart Open API!
 
-![alt text](https://github.com/albertchanged/WalmartDataViz/blob/master/src/images/WalmartDataViz_Screenshot.png)
+![alt text](https://github.com/albertchanged/WalmartDataViz/blob/master/src/images/WalmartDataViz_Screenshot_Small.png)
 
 ### How It Works
 
