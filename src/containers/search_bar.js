@@ -43,7 +43,6 @@ class SearchBar extends Component {
 					</span>
 				</form>
 			</div>	
-			<hr />
 			<h3 className="hThree">Price Differences for Bestselling {this.state.term} Products Under $25 (Rank vs. Price)</h3>
 			</div>
 		);
