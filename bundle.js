@@ -22702,7 +22702,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var API_KEY = 'cb52xbb296mfsvcexcg8qdhf';
-	var ROOT_URL = 'http://api.walmartlabs.com/v1/search?apiKey=' + API_KEY;
+	var ROOT_URL = 'https://api.walmartlabs.com/v1/search?apiKey=' + API_KEY;
 
 	var FETCH_PRODUCT = exports.FETCH_PRODUCT = 'FETCH_PRODUCT';
 
