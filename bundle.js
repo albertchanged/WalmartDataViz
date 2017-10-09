@@ -22663,7 +22663,6 @@
 							)
 						)
 					),
-					_react2.default.createElement('hr', null),
 					_react2.default.createElement(
 						'h3',
 						{ className: 'hThree' },
@@ -36914,9 +36913,11 @@
 
 				xAxis = d3.axisBottom().scale(scale).tickSize(-height + 2 * margin + axisMargin);
 
-				bar.append("rect").attr("transform", "translate(" + labelWidth + ", 0)").attr("height", barHeight).attr("width", function (d) {
+				bar.append("rect").attr("transform", "translate(" + labelWidth + ", 0)").attr("height", barHeight).attr("width", 0).transition().delay(function (d, i) {
+					return i * 200;
+				}).duration(500).attr("width", function (d) {
 					return scale(d.salePrice);
-				}).transition().duration(1000).delay(100);
+				});
 
 				bar.append("text").attr("class", "value").attr("y", barHeight / 2).attr("dx", -valueMargin + labelWidth).attr("dy", ".35em").attr("text-anchor", "end").attr("transform", "translate(-5,0)").text(function (d) {
 					return "$" + d.salePrice;
@@ -36929,7 +36930,7 @@
 					div.style("left", d3.event.pageX + 50 + "px");
 					div.style("top", d3.event.pageY - 10 + "px");
 					div.style("display", "inline-block");
-					div.html("<strong>" + (i + 1) + ".)</strong> " + d.name + "<br>" + "$" + d.salePrice);
+					div.html("<strong>" + (i + 1) + ".)</strong> " + d.name + "<br><strong>Item ID:</strong> " + d.itemId + "<br><strong>Price:</strong> $" + d.salePrice + "<br> <img id=\"thumbnailImage\" src=\"" + d.mediumImage + "\"/>");
 				});
 
 				bar.on("mouseout", function (d) {
