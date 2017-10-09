@@ -58,7 +58,7 @@ class ProductList extends Component {
 				<td><img src={productData.images[0]} /></td>
 				<td>{productData.itemIDs[0]}</td>
 				<td>{productData.descriptions[0]}&nbsp;<a href={productData.productUrls[0]} target="_blank">LEARN MORE &rarr;</a></td>
-				<td>${productData.prices[0]}Yes</td>
+				<td>${productData.prices[0]}</td>
 			</tr>
 		);
 	}
