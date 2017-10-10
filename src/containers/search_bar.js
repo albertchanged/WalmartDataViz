@@ -28,8 +28,10 @@ class SearchBar extends Component {
 		return (
 			<div className="col-lg-12">
 			<div className="inlined">
+			<div>
 				<img id="walmartLogo"src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/2000px-Walmart_logo.svg.png" />
 				<h3 className="logoh3">Data Viz</h3>
+				</div>
 				<form onSubmit ={this.onFormSubmit} className="input-group" id="searchBar">
 					<input 
 						placeholder="Search for any product!"
@@ -43,7 +45,7 @@ class SearchBar extends Component {
 					</span>
 				</form>
 			</div>
-			<h3 className="hThree">Price Differences for Bestselling {this.state.term} Products Under $25 (Rank vs. Price)</h3>
+			<h3 className="hThree">Price Differences for Bestselling {this.state.term} Products Under $25<br />(Rank vs. Price)</h3>
 			</div>
 		);
 	}

@@ -5,6 +5,7 @@ html, body {
 body {
   background-color: #F2F2F2;
   width: 100%;
+  overflow-x: hidden;
 }
 .hThree {
   font-size: 1.35rem;
@@ -16,8 +17,15 @@ body {
   margin-top: 0.5%;
 }
 #thumbnailImage {
-  padding-top: 1%;
+  /*padding-top: 3%;*/
+  /*padding-bottom: 3%;*/
+  margin-top: -20px;
   width: 30%;
+  text-align: center;
+}
+.toolTipInfo {
+	float: right;
+	display: inline-block;
 }
 form {
   padding-top: 2%;
@@ -35,6 +43,8 @@ form {
   background-color: #007EC8;
   color: white;
 }
+.inlined .btn-secondary:hover,
+.inlined .btn-secondary:active,
 .inlined .btn-secondary:hover {
   border-style: solid;
   border-color: #008CDD;
@@ -47,6 +57,7 @@ form {
   padding-top: 9.5%;
   background-color: #F2F2F2;
   padding-bottom: 2%;
+  text-align: center;
 }
 .input-group {
   margin: 5px 0px;
@@ -81,14 +92,15 @@ h3, .instructions, .disclaimer {
   position: absolute;
   display: none;
   min-width: 80px;
-  /*max-width: 500px;*/
+  /*max-width: 200px;*/
   height: auto;
   background: none repeat scroll 0 0 #ffffff;
   border: 7.5px solid #FEC222;
   border-radius: 20px;
   padding: 10px;
   font-size: 15px;
-  text-align: center;
+  text-align: left;
+  line-height: 1.2em;
 }
 .label text {
   font-size: 40px;
@@ -332,7 +344,7 @@ text.salePrice {
     font-size: 30px;
   }
   .toolTip {
-    font-size: 20px;
+    font-size: 17.5px;
   }
 }
 @media only screen and (min-width: 1500px) and (max-width: 3000px) {

@@ -92,7 +92,7 @@ class ProductVisualization extends Component {
 			.attr("text-anchor", "end")
 			.attr("transform", "translate(-5,0)")
 			.text(function(d) {
-				return "$" + d.salePrice;
+				return "$" + d.salePrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, d.salePrice);
 			})
 			.attr("x", function(d) {
 				var width = this.getBBox().width;
@@ -104,7 +104,7 @@ class ProductVisualization extends Component {
                 div.style("left", d3.event.pageX+50+"px");
                 div.style("top", d3.event.pageY-150+"px");
                 div.style("display", "inline-block");
-                div.html("<strong><span style=\"text-decoration: underline; padding-bottom: 3%\">Rank #" + (i + 1) + "</span></strong><br><strong>Name: </strong>" + (d.name)+"<br><strong>Item ID:</strong> "+ (d.itemId) + "<br><strong>Price:</strong> $" + (d.salePrice) + "<br> <img id=\"thumbnailImage\" src=\"" + (d.mediumImage) +"\"/>");
+                div.html("<strong><span style=\"font-size: 25px\">#" + (i + 1) + " </span></strong><br><strong><div style=\"text-align: center\"><img id=\"thumbnailImage\" src=\"" + (d.mediumImage) +"\"/></div><span style=\"color: #007EC8;\">Name: </span></strong><br>" + (d.name)+"<br><div className=\"toolTipInfo\"><strong><br><span style=\"color: #007EC8;\">Item ID:</strong></span><br>"+ (d.itemId) + "<br><strong><br><span style=\"color: #007EC8\">Price:</strong> </span><br>$" + (d.salePrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, d.salePrice)) + "<br></div>");
             });
 
     	bar.on("mouseout", function(d){
