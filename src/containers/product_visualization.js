@@ -78,7 +78,7 @@ class ProductVisualization extends Component {
 			.attr("height", barHeight)
 			.attr("width", 0)
 			.transition()
-			.delay(function(d, i) { return i * 250; })
+			.delay(function(d, i) { return i * 200; })
 			.duration(500)
 			.attr("width", function(d) {
 				return scale(d.salePrice);
@@ -100,11 +100,11 @@ class ProductVisualization extends Component {
 			})
 			.attr("fill", "white");
 
-		bar.on("mousemove", function(d, i){
+			bar.on("mousemove", function(d, i){
                 div.style("left", d3.event.pageX+50+"px");
-                div.style("top", d3.event.pageY-10+"px");
+                div.style("top", d3.event.pageY-150+"px");
                 div.style("display", "inline-block");
-                div.html("<strong>" + (i + 1) + ".)</strong> " + (d.name)+"<br><strong>Item ID:</strong> "+ (d.itemId) + "<br><strong>Price:</strong> $" + (d.salePrice) + "<br> <img id=\"thumbnailImage\" src=\"" + (d.mediumImage) +"\"/>");
+                div.html("<strong><span style=\"text-decoration: underline; padding-bottom: 3%\">Rank #" + (i + 1) + "</span></strong><br><strong>Name: </strong>" + (d.name)+"<br><strong>Item ID:</strong> "+ (d.itemId) + "<br><strong>Price:</strong> $" + (d.salePrice) + "<br> <img id=\"thumbnailImage\" src=\"" + (d.mediumImage) +"\"/>");
             });
 
     	bar.on("mouseout", function(d){
